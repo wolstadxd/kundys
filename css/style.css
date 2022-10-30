@@ -129,6 +129,10 @@ body.locked {
   overflow: hidden;
 }
 
+.main {
+  overflow: hidden;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -794,8 +798,45 @@ nav {
   max-width: 442px;
 }
 
-.section__portfolio {
-  padding-bottom: 120px;
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio__projects-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 36px;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 .portfolio__projects {
@@ -808,23 +849,6 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 65px;
-}
-
-.portfolio__projects-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
-}
-
-.portfolio__projects-arrows {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 36px;
 }
 
 .section__reviews {
@@ -1442,21 +1466,6 @@ footer {
     margin-top: 12px;
   }
 
-  .section__portfolio {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-bottom: 40px;
-  }
-
-  .portfolio__projects {
-    padding-top: 40px;
-    gap: 30px;
-  }
-
-  .portfolio__projects-items {
-    max-width: 266px;
-  }
-
   .portfolio__projects-arrows {
     gap: 27px;
   }
@@ -1466,8 +1475,9 @@ footer {
     height: 20px;
   }
 
-  .portfolio__projects-item img {
-    width: 266px;
+  .portfolio__projects {
+    padding-top: 40px;
+    gap: 30px;
   }
 
   .section__reviews {
